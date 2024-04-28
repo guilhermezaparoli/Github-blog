@@ -1,9 +1,14 @@
 import styled from 'styled-components';
 
-export const Content = styled.body`
+export const Global = styled.body`
   display: flex;
   align-items: center;
   justify-content: center;
+`;
+
+export const Content = styled.div`
+  display: flex;
+  flex-direction: column;
 `;
 
 export const ProfileCard = styled.div`
@@ -37,6 +42,12 @@ export const GitHubRedirect = styled.a`
   display: flex;
   align-items: center;
   gap: 8px;
+  border-bottom: 1px solid transparent;
+  cursor: pointer;
+  transition: border 0.3s;
+  &:hover {
+    border-bottom: 1px solid ${({theme}) => theme.blue};
+  }
 `;
 
 export const GitHubRedirectText = styled.p`
@@ -69,4 +80,44 @@ export const IconTextContainer = styled.div`
 export const Icon = styled.img`
   width: 18px;
   height: 18px;
+`;
+
+export const WrapperText = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 4.375rem;
+  margin-bottom: 0.75rem;
+`;
+export const TextPublication = styled.h1`
+  line-height: 1.6;
+  font-size: 1.125rem;
+`;
+
+export const TextHowLongTimePublication = styled.p`
+  font-size: 0.875rem;
+`;
+
+export const SearchInput = styled.input`
+  padding: 12px 16px;
+  border-radius: 6px;
+  border: 1px solid ${({ theme }) => theme['base-border']};
+  background-color: ${({ theme }) => theme['base-input']};
+  color: ${({ theme }) => theme['base-text']};
+  font-size: 16px;
+  &::placeholder {
+    color: ${({ theme }) => theme['base-label']};
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  transition: border 0.3s;
+  outline: none;
+  &:hover {
+    border: 1px solid ${({ theme }) => theme.blue};
+  }
+  &:focus {
+    border: 1px solid ${({ theme }) => theme.blue};
+  }
 `;
