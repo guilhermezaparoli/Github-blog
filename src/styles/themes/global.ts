@@ -16,4 +16,8 @@ body {
     -webkit-font-smoothing: antialised;
 }
 
+
+h1, h2, h3, p, input {
+    font-family: "Nunito", sans-serif;
+}
 `;
