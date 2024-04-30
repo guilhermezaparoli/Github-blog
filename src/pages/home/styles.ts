@@ -4,6 +4,7 @@ export const Global = styled.body`
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-bottom: 200px;
 `;
 
 export const Content = styled.div`
@@ -62,6 +63,8 @@ export const IconRedirect = styled.img`
 export const TextProfile = styled.p`
   font-weight: 400;
   line-height: 25px;
+  color: ${({theme}) => theme["base-span"]};
+
 `;
 
 export const WrapperAdditionalInfos = styled.div`
@@ -97,6 +100,7 @@ export const TextPublication = styled.h1`
 
 export const TextHowLongTimePublication = styled.p`
   font-size: 0.875rem;
+  color: ${({theme}) => theme['base-span']};
 `;
 
 export const SearchInput = styled.input`
@@ -121,3 +125,12 @@ export const SearchInput = styled.input`
     border: 1px solid ${({ theme }) => theme.blue};
   }
 `;
+
+
+export const WrapperPosts = styled.div`
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(416px, 1fr));
+gap: 32px;
+flex-wrap: wrap;
+margin-top: 48px;
+`
