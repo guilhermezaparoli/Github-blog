@@ -7,6 +7,14 @@ export const Card = styled.div`
 
   background-color: ${({theme}) => theme['base-post']};
   border-radius: 10px;
+  cursor: pointer;
+border: 2px solid transparent;
+
+transition: 0.3s;
+  &:hover {
+    transform: scale(1.01);
+    border: 2px solid ${({theme}) => theme['base-label']};
+  }
 `;
 export const HeaderCard = styled.div`
   display: flex;

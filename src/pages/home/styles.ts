@@ -78,6 +78,13 @@ export const IconTextContainer = styled.div`
   display: flex;
   gap: 4px;
   align-items: center;
+  cursor: pointer;
+
+  transition: filter 0.3s;
+
+  &:hover {
+   filter: brightness(1.5);
+  }
 `;
 
 export const Icon = styled.img`

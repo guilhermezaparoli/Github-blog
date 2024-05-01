@@ -11,7 +11,7 @@ export function PostPage() {
       <S.Content>
         <S.ProfileCard>
           <S.HeaderCard>
-            <S.WrapperTextIcon href='/'>
+            <S.WrapperTextIcon href="/">
               <S.SmallIcon src={arrowLeftIcon} />
               <S.TextLink>VOLTAR</S.TextLink>
             </S.WrapperTextIcon>
@@ -21,28 +21,35 @@ export function PostPage() {
             </S.WrapperTextIcon>
           </S.HeaderCard>
           <S.TitlePost>JavaScript data types and data structures</S.TitlePost>
-        <S.WrapperAdditionalInfos>
+          <S.WrapperAdditionalInfos>
             <S.IconTextContainer>
-                <S.BigIcon src={gitHubIcon} />
-                <S.TextInfoIcons>
-                    guilhermezapas
-                </S.TextInfoIcons>
+              <S.BigIcon src={gitHubIcon} />
+              <S.TextInfoIcons>guilhermezapas</S.TextInfoIcons>
             </S.IconTextContainer>
             <S.IconTextContainer>
-                <S.BigIcon src={calendarIcon} />
-                <S.TextInfoIcons>
-                    Há 1 dia
-                </S.TextInfoIcons>
+              <S.BigIcon src={calendarIcon} />
+              <S.TextInfoIcons>Há 1 dia</S.TextInfoIcons>
             </S.IconTextContainer>
             <S.IconTextContainer>
-                <S.BigIcon src={commentIcon} />
-                <S.TextInfoIcons>
-                    5 comentários
-                </S.TextInfoIcons>
+              <S.BigIcon src={commentIcon} />
+              <S.TextInfoIcons>5 comentários</S.TextInfoIcons>
             </S.IconTextContainer>
-        </S.WrapperAdditionalInfos>
+          </S.WrapperAdditionalInfos>
         </S.ProfileCard>
 
+        <S.WrapperText>
+          <S.SimpleText>
+            Programming languages all have built-in data structures, but these
+            often differ from one language to another. This article attempts to
+            list the built-in data structures available in JavaScript and what
+            properties they have. These can be used to build other data
+            structures. Wherever possible, comparisons with other languages are
+            drawn. Dynamic typing JavaScript is a loosely typed and dynamic
+            language. Variables in JavaScript are not directly associated with
+            any particular value type, and any variable can be assigned (and
+            re-assigned) values of all types:
+          </S.SimpleText>
+        </S.WrapperText>
       </S.Content>
     </S.Global>
   );

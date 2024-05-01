@@ -20,6 +20,7 @@ export const ProfileCard = styled.div`
   box-shadow: 0px 2px 28px 0px #00000033;
   display: flex;
   flex-direction: column;
+  margin-top: -50px;
 `;
 export const HeaderCard = styled.div`
   display: flex;
@@ -64,6 +65,12 @@ export const IconTextContainer = styled.div`
   display: flex;
   gap: 4px;
   align-items: center;
+cursor: pointer;
+  transition: filter 0.3s;
+
+&:hover {
+ filter: brightness(1.5);
+}
 `;
 
 export const BigIcon = styled.img`
@@ -75,3 +82,12 @@ export const TextInfoIcons = styled.p`
   line-height: 25px;
   color: ${({theme}) => theme["base-span"]};
 `;
+
+export const WrapperText = styled.section`
+padding: 40px 32px;
+max-width: 800px;
+`
+
+export const SimpleText = styled.p`
+color: ${({theme}) => theme["base-text"]};
+`
