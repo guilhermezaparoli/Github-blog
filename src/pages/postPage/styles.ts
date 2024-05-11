@@ -61,7 +61,7 @@ export const WrapperAdditionalInfos = styled.div`
   gap: 24px;
 `;
 
-export const IconTextContainer = styled.div`
+export const IconTextContainer = styled.a`
   display: flex;
   gap: 4px;
   align-items: center;
@@ -85,7 +85,7 @@ export const TextInfoIcons = styled.p`
 
 export const WrapperText = styled.section`
   padding: 40px 32px;
-  max-width: 800px;
+  max-width: 54rem;
 `;
 
 export const SimpleText = styled.p`

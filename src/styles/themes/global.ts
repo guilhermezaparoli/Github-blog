@@ -21,4 +21,8 @@ h1, h2, h3, p, input {
     font-family: "Nunito", sans-serif;
     line-height: 1.6;
 }
+
+a {
+    text-decoration:none;
+}
 `;
