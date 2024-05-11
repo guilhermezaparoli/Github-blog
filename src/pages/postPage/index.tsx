@@ -32,7 +32,7 @@ export function PostPage() {
       locale: ptBR,
       addSuffix: true,
     });
-    console.log(response);
+    (response);
     setDataPostPage(response);
   }
 
@@ -55,7 +55,7 @@ export function PostPage() {
           </S.HeaderCard>
           <S.TitlePost>{dataPostPage.title}</S.TitlePost>
           <S.WrapperAdditionalInfos>
-            <S.IconTextContainer href={dataPostPage?.user.html_url} target='_blank'>
+            <S.IconTextContainer href={dataPostPage?.user?.html_url} target='_blank'>
               <S.BigIcon src={gitHubIcon} />
               <S.TextInfoIcons>{dataPostPage?.user?.login}</S.TextInfoIcons>
             </S.IconTextContainer>

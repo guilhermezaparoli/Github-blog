@@ -76,7 +76,7 @@ export const WrapperAdditionalInfos = styled.div`
   margin-top: 24px;
 `;
 
-export const IconTextContainer = styled.div`
+export const IconTextContainer = styled.a`
   display: flex;
   gap: 4px;
   align-items: center;
@@ -142,4 +142,36 @@ grid-template-columns: repeat(auto-fit, minmax(416px, 1fr));
 gap: 32px;
 flex-wrap: wrap;
 margin-top: 48px;
+`
+
+
+export const LoaderContainerGlobal = styled.div`
+ position:absolute; 
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+`
+export const LoaderContainerPosts = styled.div`
+ display: flex;
+ justify-content: center;
+ margin-top: 75px;
+`
+export const Loader = styled.div`
+
+  width: 60px;
+  padding: 6px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: ${({theme}) => theme.blue};
+  --_m: 
+    conic-gradient(#0000 10%,#000),
+    linear-gradient(#000 0 0) content-box;
+  -webkit-mask: var(--_m);
+          mask: var(--_m);
+  -webkit-mask-composite: source-out;
+          mask-composite: subtract;
+  animation: l3 1s infinite linear;
+  
+
+@keyframes l3 {to{transform: rotate(1turn)}}
 `
