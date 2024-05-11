@@ -1,24 +1,36 @@
+import { formatDistanceToNow } from 'date-fns';
 import * as S from './styles';
-
+import { ptBR } from 'date-fns/locale';
+import { useNavigate } from 'react-router-dom';
 
 interface PostCardProps {
-    title: string;
-    timePosted: string;
-    description: string;
+  id: number;
+  title: string;
+  timePosted: Date;
+  description: string;
 }
 
-export function PostCard({title, timePosted,  description}: PostCardProps) {
+export function PostCard({
+  title,
+  timePosted,
+  description,
+  id,
+}: PostCardProps) {
+  const publishedDateRelativeToNow = formatDistanceToNow(timePosted, {
+    locale: ptBR,
+    addSuffix: true,
+  });
+  const navigate = useNavigate();
   return (
-    <S.Card>
+    <S.Card onClick={() => navigate(`/posts/${id}`)}>
       <S.HeaderCard>
         <S.Title>{title}</S.Title>
-        <S.TextHowLongTimePublication>{timePosted}</S.TextHowLongTimePublication>
+        <S.TextHowLongTimePublication>
+          {publishedDateRelativeToNow}
+        </S.TextHowLongTimePublication>
       </S.HeaderCard>
-     
-      <S.TextDescriptionCard>
-       {description}
-      </S.TextDescriptionCard>
 
+      <S.TextDescriptionCard>{description}</S.TextDescriptionCard>
     </S.Card>
   );
 }

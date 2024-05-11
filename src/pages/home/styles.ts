@@ -13,7 +13,7 @@ export const Content = styled.div`
 `;
 
 export const ProfileCard = styled.div`
-  max-width: 54rem;
+  min-width: 54rem;
   padding: 2rem 2.5rem;
   background-color: ${({ theme }) => theme['base-profile']};
   border-radius: 10px;
@@ -29,7 +29,9 @@ export const Avatar = styled.img`
   border-radius: 8px;
 `;
 
-export const UserInfos = styled.div``;
+export const UserInfos = styled.div`
+flex: 1;
+`;
 
 export const HeaderCard = styled.div`
   display: flex;

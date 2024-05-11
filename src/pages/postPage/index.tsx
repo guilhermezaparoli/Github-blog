@@ -4,8 +4,28 @@ import arrowLeftIcon from '../../assets/images/type-chevron-left-solid.svg';
 import gitHubIcon from '../../assets/images/type-github-brands.svg';
 import calendarIcon from '../../assets/images/type-calendar-day-solid.svg';
 import commentIcon from '../../assets/images/type-comment-solid.svg';
+import { useEffect, useState } from 'react';
+import { fetchIssuePost } from '../../api/api';
+import { useParams } from 'react-router-dom';
+
+
+
 
 export function PostPage() {
+const [dataPostPage, setDataPostPage] = useState({})
+
+const {postId} = useParams()
+
+console.log(postId)
+
+  async function fetchPostData() {
+    const response = fetchIssuePost(postId)
+    setDataPostPage(response)
+  }
+
+  useEffect(() => {
+    fetchPostData()
+  }, [])
   return (
     <S.Global>
       <S.Content>

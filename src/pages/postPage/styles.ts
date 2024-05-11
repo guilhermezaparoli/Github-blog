@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Global = styled.body`
   display: flex;
@@ -41,7 +41,7 @@ export const WrapperTextIcon = styled.a`
   cursor: pointer;
   transition: border 0.3s;
   &:hover {
-    border-bottom: 1px solid ${({theme}) => theme.blue};
+    border-bottom: 1px solid ${({ theme }) => theme.blue};
   }
 `;
 
@@ -65,12 +65,12 @@ export const IconTextContainer = styled.div`
   display: flex;
   gap: 4px;
   align-items: center;
-cursor: pointer;
+  cursor: pointer;
   transition: filter 0.3s;
 
-&:hover {
- filter: brightness(1.5);
-}
+  &:hover {
+    filter: brightness(1.5);
+  }
 `;
 
 export const BigIcon = styled.img`
@@ -80,14 +80,14 @@ export const BigIcon = styled.img`
 export const TextInfoIcons = styled.p`
   font-weight: 400;
   line-height: 25px;
-  color: ${({theme}) => theme["base-span"]};
+  color: ${({ theme }) => theme['base-span']};
 `;
 
 export const WrapperText = styled.section`
-padding: 40px 32px;
-max-width: 800px;
-`
+  padding: 40px 32px;
+  max-width: 800px;
+`;
 
 export const SimpleText = styled.p`
-color: ${({theme}) => theme["base-text"]};
-`
+  color: ${({ theme }) => theme['base-text']};
+`;
